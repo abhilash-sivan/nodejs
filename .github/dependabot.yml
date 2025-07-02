@@ -3,84 +3,100 @@
 # Please see the documentation for all configuration options:
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
+# version: 2
+# updates:
+#   - package-ecosystem: "npm"
+#     directory: "/packages/collector" # Path to one of your packages
+#     schedule:
+#       interval: "daily"
+#     allow:
+#       - dependency-type: "production"
+#     groups:
+#       collector-deps:
+#         patterns: ["*"]
+
+#   - package-ecosystem: "npm"
+#     directory: "/packages/core"
+#     schedule:
+#       interval: "daily"
+#     allow:
+#       - dependency-type: "production"
+#     groups:
+#       core-deps:
+#         patterns: ["*"]
+        
+#   - package-ecosystem: "npm"
+#     directory: "/packages/autoprofile"
+#     schedule:
+#       interval: "daily"
+#     allow:
+#       - dependency-type: "production"
+#     groups:
+#       autoprofile-deps:
+#         patterns: ["*"]
+
+#   - package-ecosystem: "npm"
+#     directory: "/packages/serverless"
+#     schedule:
+#       interval: "daily"
+#     allow:
+#       - dependency-type: "production"
+#     groups:
+#       serverless-deps:
+#         patterns: ["*"]
+
+#   - package-ecosystem: "npm"
+#     directory: "/packages/serverless-collector"
+#     schedule:
+#       interval: "daily"
+#     allow:
+#       - dependency-type: "production"
+#     groups:
+#       serverless-collector-deps:
+#         patterns: ["*"]
+
+#   - package-ecosystem: "npm"
+#     directory: "/packages/shared-metrics"
+#     schedule:
+#       interval: "daily"
+#     allow:
+#       - dependency-type: "production"
+#     groups:
+#       shared-metrics-deps:
+#         patterns: ["*"]
+
+#   - package-ecosystem: "npm"
+#     directory: "/packages/opentelemetry-exporter"
+#     schedule:
+#       interval: "daily"
+#     allow:
+#       - dependency-type: "production"
+#     groups:
+#       opentelemetry-exporter-deps:
+#         patterns: ["*"]
+
+#   - package-ecosystem: "npm"
+#     directory: "/packages/opentelemetry-sampler"
+#     schedule:
+#       interval: "daily"
+#     allow:
+#       - dependency-type: "production"
+#     groups:
+#       opentelemetry-sampler-deps:
+#         patterns: ["*"]
+
+
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/packages/collector" # Path to one of your packages
+    directory: "/"  # root where your package-lock.json is
     schedule:
-      interval: "daily"
+      interval: "weekly"
     allow:
       - dependency-type: "production"
     groups:
-      collector-deps:
-        patterns: ["*"]
-
-  - package-ecosystem: "npm"
-    directory: "/packages/core"
-    schedule:
-      interval: "daily"
-    allow:
-      - dependency-type: "production"
-    groups:
-      core-deps:
-        patterns: ["*"]
-        
-  - package-ecosystem: "npm"
-    directory: "/packages/autoprofile"
-    schedule:
-      interval: "daily"
-    allow:
-      - dependency-type: "production"
-    groups:
-      autoprofile-deps:
-        patterns: ["*"]
-
-  - package-ecosystem: "npm"
-    directory: "/packages/serverless"
-    schedule:
-      interval: "daily"
-    allow:
-      - dependency-type: "production"
-    groups:
-      serverless-deps:
-        patterns: ["*"]
-
-  - package-ecosystem: "npm"
-    directory: "/packages/serverless-collector"
-    schedule:
-      interval: "daily"
-    allow:
-      - dependency-type: "production"
-    groups:
-      serverless-collector-deps:
-        patterns: ["*"]
-
-  - package-ecosystem: "npm"
-    directory: "/packages/shared-metrics"
-    schedule:
-      interval: "daily"
-    allow:
-      - dependency-type: "production"
-    groups:
-      shared-metrics-deps:
-        patterns: ["*"]
-
-  - package-ecosystem: "npm"
-    directory: "/packages/opentelemetry-exporter"
-    schedule:
-      interval: "daily"
-    allow:
-      - dependency-type: "production"
-    groups:
-      opentelemetry-exporter-deps:
-        patterns: ["*"]
-
-  - package-ecosystem: "npm"
-    directory: "/packages/opentelemetry-sampler"
-    schedule:
-      interval: "daily"
-    allow:
-      - dependency-type: "production"
-    groups:
-      opentelemetry-sampler-deps:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
         patterns: ["*"]
