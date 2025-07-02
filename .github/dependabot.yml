@@ -11,6 +11,9 @@ updates:
       interval: "daily"
     allow:
       - dependency-type: "production"
+    groups:
+      collector-deps:
+        patterns: ["*"]
 
   - package-ecosystem: "npm"
     directory: "/packages/core"
@@ -18,4 +21,6 @@ updates:
       interval: "daily"
     allow:
       - dependency-type: "production"
-
+    groups:
+      core-deps:
+        patterns: ["*"]
