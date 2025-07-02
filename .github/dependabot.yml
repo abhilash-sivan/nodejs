@@ -8,14 +8,14 @@ updates:
   - package-ecosystem: "npm"
     directory: "/packages/collector" # Path to one of your packages
     schedule:
-      interval: "hourly"
+      interval: "daily"
     allow:
       - dependency-type: "production"
 
   - package-ecosystem: "npm"
     directory: "/packages/core"
     schedule:
-      interval: "hourly"
+      interval: "daily"
     allow:
       - dependency-type: "production"
 
