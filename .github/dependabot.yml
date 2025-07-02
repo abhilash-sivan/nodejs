@@ -24,3 +24,63 @@ updates:
     groups:
       core-deps:
         patterns: ["*"]
+        
+  - package-ecosystem: "npm"
+    directory: "/packages/autoprofile"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "production"
+    groups:
+      autoprofile-deps:
+        patterns: ["*"]
+
+  - package-ecosystem: "npm"
+    directory: "/packages/serverless"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "production"
+    groups:
+      serverless-deps:
+        patterns: ["*"]
+
+  - package-ecosystem: "npm"
+    directory: "/packages/serverless-collector"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "production"
+    groups:
+      serverless-collector-deps:
+        patterns: ["*"]
+
+  - package-ecosystem: "npm"
+    directory: "/packages/shared-metrics"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "production"
+    groups:
+      shared-metrics-deps:
+        patterns: ["*"]
+
+  - package-ecosystem: "npm"
+    directory: "/packages/opentelemetry-exporter"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "production"
+    groups:
+      opentelemetry-exporter-deps:
+        patterns: ["*"]
+
+  - package-ecosystem: "npm"
+    directory: "/packages/opentelemetry-sampler"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-type: "production"
+    groups:
+      opentelemetry-sampler-deps:
+        patterns: ["*"]
