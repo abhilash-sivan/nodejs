@@ -16,5 +16,5 @@
       "groupName": null
     }
   ],
-  "schedule": ["before 3am on monday"]
+  "schedule": ["daily"]
 }
