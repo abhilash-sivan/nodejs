@@ -94,9 +94,3 @@ updates:
       interval: "weekly"
     allow:
       - dependency-type: "production"
-    groups:
-      minor-and-patch:
-        update-types:
-          - "minor"
-          - "patch"
-        patterns: ["*"]
