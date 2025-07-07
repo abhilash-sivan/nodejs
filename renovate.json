@@ -3,14 +3,14 @@
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
-      "matchDepTypes": ["dependencies"],
+      "matchDepTypes": ["*"],
       "groupName": "minor/patch updates",
       "allowedVersions": "/.*/",
       "matchUpdateTypes": ["minor", "patch"]
     },
     {
       "matchPackagePatterns": ["*"],
-      "matchDepTypes": ["dependencies"],
+      "matchDepTypes": ["*"],
       "matchUpdateTypes": ["major"],
       "groupName": null
     }
