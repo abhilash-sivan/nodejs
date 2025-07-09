@@ -7,7 +7,7 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/" 
+    directory: "/"
     schedule:
       interval: "weekly"
       day: "sunday"
@@ -20,6 +20,19 @@ updates:
       prefix: "build:"
     pull-request-branch-name:
       separator: "-"
+
+    groups:
+      major-updates:
+        update-types:
+          - "version-update:semver-major"
+        max-open-pull-requests: 2
+
+      minor-patch-updates:
+        update-types:
+          - "version-update:semver-minor"
+          - "version-update:semver-patch"
+        max-open-pull-requests: 5
+
 # version: 2
 # updates:
 #   - package-ecosystem: "npm"
