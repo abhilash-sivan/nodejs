@@ -14,7 +14,9 @@ updates:
       - dependency-type: "production"
     rebase-strategy: "disabled"
     commit-message:
-        prefix: "build:"
+      prefix: "build:"
+    pull-request-branch-name:
+      separator: "-"
     
 # version: 2
 # updates:
