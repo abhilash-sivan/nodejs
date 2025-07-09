@@ -3,6 +3,19 @@
 # Please see the documentation for all configuration options:
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/" 
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-type: "production"
+    rebase-strategy: "disabled"
+    commit-message:
+        prefix: "build:"
+    
 # version: 2
 # updates:
 #   - package-ecosystem: "npm"
@@ -84,13 +97,3 @@
 #     groups:
 #       opentelemetry-sampler-deps:
 #         patterns: ["*"]
-
-
-version: 2
-updates:
-  - package-ecosystem: "npm"
-    directory: "/"  # root where your package-lock.json is
-    schedule:
-      interval: "weekly"
-    allow:
-      - dependency-type: "production"
