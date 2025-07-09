@@ -10,6 +10,9 @@ updates:
     directory: "/" 
     schedule:
       interval: "weekly"
+      day: "sunday"
+      time: "00:00"
+      timezone: "UTC"
     allow:
       - dependency-type: "production"
     rebase-strategy: "disabled"
@@ -17,7 +20,6 @@ updates:
       prefix: "build:"
     pull-request-branch-name:
       separator: "-"
-      prefix: "build"
 # version: 2
 # updates:
 #   - package-ecosystem: "npm"
