@@ -20,18 +20,30 @@ updates:
       prefix: "build:"
     pull-request-branch-name:
       separator: "-"
+    open-pull-requests-limit: 2
+    ignore:
+      - dependency-type: "production"
+        update-types: ["minor", "patch"]
 
-    groups:
-      major-updates:
-        update-types:
-          - "version-update:semver-major"
-        max-open-pull-requests: 2
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "00:00"
+      timezone: "UTC"
+    allow:
+      - dependency-type: "production"
+    rebase-strategy: "disabled"
+    commit-message:
+      prefix: "build:"
+    pull-request-branch-name:
+      separator: "-"
+    open-pull-requests-limit: 5
+    ignore:
+      - dependency-type: "production"
+        update-types: ["major"]
 
-      minor-patch-updates:
-        update-types:
-          - "version-update:semver-minor"
-          - "version-update:semver-patch"
-        max-open-pull-requests: 5
 
 # version: 2
 # updates:
