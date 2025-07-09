@@ -9,11 +9,6 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     target-branch: main
-    schedule:
-      interval: "weekly"
-      day: "sunday"
-      time: "00:00"
-      timezone: "UTC"
     allow:
       - dependency-type: "production"
     rebase-strategy: "disabled"
