@@ -17,7 +17,7 @@ updates:
       prefix: "build:"
     pull-request-branch-name:
       separator: "-"
-    
+      prefix: "build-"
 # version: 2
 # updates:
 #   - package-ecosystem: "npm"
