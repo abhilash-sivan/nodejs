@@ -4,34 +4,34 @@
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 
-# version: 2
-# updates:
-#   - package-ecosystem: "npm"
-#     directory: "/"
-#     target-branch: main
-#     schedule:
-#       interval: "daily"
-#     allow:
-#       - dependency-type: "production"
-#     rebase-strategy: "disabled"
-#     commit-message:
-#       prefix: "build:"
-#     pull-request-branch-name:
-#       separator: "-"
-#     open-pull-requests-limit: 5
-
-
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/packages/collector" # Path to one of your packages
+    directory: "/"
+    target-branch: main
     schedule:
       interval: "daily"
     allow:
       - dependency-type: "production"
-    groups:
-      collector-deps:
-        patterns: ["*"]
+    rebase-strategy: "disabled"
+    commit-message:
+      prefix: "build:"
+    pull-request-branch-name:
+      separator: "-"
+    open-pull-requests-limit: 5
+
+
+# version: 2
+# updates:
+#   - package-ecosystem: "npm"
+#     directory: "/packages/collector" # Path to one of your packages
+#     schedule:
+#       interval: "daily"
+#     allow:
+#       - dependency-type: "production"
+#     groups:
+#       collector-deps:
+#         patterns: ["*"]
 
 #   - package-ecosystem: "npm"
 #     directory: "/packages/core"
